@@ -1,1 +1,1 @@
-window.Writings = Ember.Application.create();
+Ember.Application.create();
