@@ -22,11 +22,12 @@
   <script type="text/x-handlebars" data-template-name="numbers">
     <h2>NUMBERS</h2>
     <nav>
-      {{#link-to 'numbers.one'}}One{{/link-to}}
-      {{#link-to 'numbers.two'}}Two{{/link-to}}
+      {{#each}}
+        {{#link-to 'numbers.one' }} {{linkName}} {{/link-to}}
+      {{/each}}
     </nav>
     {{outlet}}
-  </script>		
+  </script>
   <script type="text/x-handlebars" data-template-name="numbers/one">
     <h3>ONE</h3>
     <img {{bind-attr src=path}}>
