@@ -12,19 +12,23 @@
 		<p>Your name is: {{name}}</p>
     <nav>
       {{#link-to 'index'}}Home{{/link-to}}
-      {{#link-to 'one'}}One{{/link-to}}
-      {{#link-to 'two'}}Two{{/link-to}}
+      {{#link-to 'numbers.one'}}One{{/link-to}}
+      {{#link-to 'numbers.two'}}Two{{/link-to}}
     </nav>
     {{outlet}}
 	</script>
   <script type="text/x-handlebars" data-template-name="index">
     <h1>HOME</h1>
+	</script>
+  <script type="text/x-handlebars" data-template-name="numbers">
+    <h2>NUMBERS</h2>
+    {{outlet}}
+  </script>		
+  <script type="text/x-handlebars" data-template-name="numbers/one">
+    <h3>ONE</h3>
   </script>
-  <script type="text/x-handlebars" data-template-name="one">
-    <h1>ONE</h1>
-  </script>
-  <script type="text/x-handlebars" data-template-name="two">
-    <h1>TWO</h1>
+  <script type="text/x-handlebars" data-template-name="numbers/two">
+    <h3>TWO</h3>
   </script>
   <script src="jquery-1.10.2.min.js"></script>
   <script src="handlebars-1.0.0.js"></script>
