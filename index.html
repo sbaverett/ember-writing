@@ -12,8 +12,7 @@
 		<p>Your name is: {{name}}</p>
     <nav>
       {{#link-to 'index'}}Home{{/link-to}}
-      {{#link-to 'numbers.one'}}One{{/link-to}}
-      {{#link-to 'numbers.two'}}Two{{/link-to}}
+      {{#link-to 'numbers'}}Numbers{{/link-to}}
     </nav>
     {{outlet}}
 	</script>
@@ -22,6 +21,10 @@
 	</script>
   <script type="text/x-handlebars" data-template-name="numbers">
     <h2>NUMBERS</h2>
+    <nav>
+      {{#link-to 'numbers.one'}}One{{/link-to}}
+      {{#link-to 'numbers.two'}}Two{{/link-to}}
+    </nav>
     {{outlet}}
   </script>		
   <script type="text/x-handlebars" data-template-name="numbers/one">
