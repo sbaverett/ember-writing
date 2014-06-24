@@ -4,3 +4,11 @@ App.Router.map(function() {
   	this.route('two');
 	}); 
 });
+
+App.NumbersOneRoute = Ember.Route.extend({
+	model: function() {
+		return {
+			path: 'one.jpeg'
+		};
+	}
+});
