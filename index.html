@@ -10,10 +10,22 @@
 		   {{input type="text" id="name" placeholder="Enter name here." value=name}}
 		</div>
 		<p>Your name is: {{name}}</p>
+    <nav>
+      {{#link-to 'one'}}One{{/link-to}}
+      {{#link-to 'two'}}Two{{/link-to}}
+    </nav>
+    {{outlet}}
 	</script>
+  <script type="text/x-handlebars" data-template-name="one">
+    <h1>ONE</h1>
+  </script>
+  <script type="text/x-handlebars" data-template-name="two">
+    <h1>TWO</h1>
+  </script>
   <script src="jquery-1.10.2.min.js"></script>
   <script src="handlebars-1.0.0.js"></script>
   <script src="ember.js"></script>
   <script src="application.js"></script>
+  <script src="router.js"></script>
 </body>
 </html>
