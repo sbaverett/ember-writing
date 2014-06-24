@@ -11,11 +11,15 @@
 		</div>
 		<p>Your name is: {{name}}</p>
     <nav>
+      {{#link-to 'index'}}Home{{/link-to}}
       {{#link-to 'one'}}One{{/link-to}}
       {{#link-to 'two'}}Two{{/link-to}}
     </nav>
     {{outlet}}
 	</script>
+  <script type="text/x-handlebars" data-template-name="index">
+    <h1>HOME</h1>
+  </script>
   <script type="text/x-handlebars" data-template-name="one">
     <h1>ONE</h1>
   </script>
