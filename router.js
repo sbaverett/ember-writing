@@ -25,3 +25,14 @@ App.NumbersRoute = Ember.Route.extend({
 	}
 });
 
+App.NumberRoute = Ember.Route.extend({
+	model: function(params) {
+		var numberObject;
+		numbersArray.forEach(function(object) {
+			if(object.id === +params.numbers_id) {
+				numberObject = object;
+			}
+		});
+		return numberObject;
+	}
+});
