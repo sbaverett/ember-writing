@@ -24,12 +24,6 @@ App.EditsRoute = Ember.Route.extend({
 
 App.AdditionsRoute = Ember.Route.extend({
 	model: function() {
-		return this.store.createRecord('number');
-	},
-	actions: {
-		createNumber: function() {
-			this.get('number');
-			number.save();
-		}
+		return this.store.createRecord('number').save();
 	}
 });
