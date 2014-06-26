@@ -4,47 +4,19 @@ App.Router.map(function() {
   this.route('edits', { path: '/numbers/:numbers_id/edits' });
 });
 
-var numbersArray = [{
-      path: 'one.jpeg',
-      anotherLanguage: 'Un',
-      url: 'http://en.wikipedia.org/wiki/one',
-      linkName: 'One',
-      routePath: 'numbers.one',
-      id: 1
-    }, {
-      path: 'two.jpeg',
-      anotherLanguage: 'deux',
-      url: 'http://en.wikipedia.org/wiki/two',
-      linkName: 'Two',
-      routePath: 'numbers.two',
-      id: 2
-    }];
-
 App.NumbersRoute = Ember.Route.extend({
 	model: function() {
-		return numbersArray;
+		return this.store.find('number');
 	}
 });
 
 App.NumberRoute = Ember.Route.extend({
 	model: function(params) {
-		var numberObject;
-		numbersArray.forEach(function(object) {
-			if(object.id === +params.numbers_id) {
-				numberObject = object;
-			}
-		});
-		return numberObject;
+		return this.store.find('number', +params.numbers_id);
 	}
 });
 App.EditsRoute = Ember.Route.extend({
 	model: function(params) {
-		var numberObject;
-		numbersArray.forEach(function(object) {
-			if(object.id === +params.numbers_id) {
-				numberObject = object;
-			}
-		});
-		return numberObject;
+		return this.store.find('number', +params.numbers_id);
 	}
 });
