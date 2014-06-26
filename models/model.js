@@ -1,6 +1,3 @@
-App.Store = DS.Store.extend({
-	adapter: DS.FixtureAdapter
-});
 
 App.Number = DS.Model.extend({
 	path: DS.attr('string'),
